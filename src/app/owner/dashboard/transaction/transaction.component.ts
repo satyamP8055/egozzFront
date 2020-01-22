@@ -87,7 +87,8 @@ export class TransactionComponent implements OnInit {
     "phone": [''],
     "productinfo": [''],
     "surl": [''],
-    "furl": ['']
+    "furl": [''],
+    "service_provider":['']
   });
 
   @ViewChild("payUFinalForm", { static: true })
@@ -129,7 +130,8 @@ export class TransactionComponent implements OnInit {
               "phone": confirmed.phone,
               "productinfo": confirmed.productinfo,
               "surl": confirmed.surl,
-              "furl": confirmed.furl
+              "furl": confirmed.furl,
+              "service_provider" : confirmed.service_provider
             });
             this.payUBase = confirmed.baseUrl;
             console.log("value placed in form & base = " + this.payUBase);
