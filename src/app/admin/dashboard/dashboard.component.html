@@ -1,0 +1,34 @@
+<div class="sidenav" *ngIf="sideBar">
+    <a *ngFor="let ac of access" [class.active]="ac==currentAccess" (click)="selectDivision(ac)">
+        {{ac.accessName}}
+    </a>
+    <!-- <a href="#about" class="active">About</a>
+    <a href="#services">Services</a>
+    <a href="#clients">Clients</a>
+    <a href="#contact">Contact</a> -->
+</div>
+<nav class="navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#adminNavbar">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="navbar-brand">
+                <div class="logoHolder">
+                    <img src="{{logoLocation}}" class='logoImage'>
+                </div>
+            </div>
+        </div>
+        <ul class="nav navbar-nav" style="text-align:center;">
+            <li [class.activeBox]="sideBar" style="min-width:50px;"><a (click)="sideBarToggle()"><span class='fa fa-bars'></span></a></li>
+        </ul>
+        <div class="collapse navbar-collapse" id="adminNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li *ngIf="profile"><a><span class="glyphicon glyphicon-user"></span> {{firstName}}</a></li>
+                <li><a (click)="logout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div [class.contentBox]="sideBar">
+</div>
