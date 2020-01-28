@@ -13,7 +13,6 @@ export class AdminTripsComponent implements OnInit {
 
   ngOnInit() {
     this.token=localStorage.getItem("token");
-    console.log("Initialized");
     this.getTrips();
   }
 
@@ -22,11 +21,9 @@ export class AdminTripsComponent implements OnInit {
   trips:any[]=[];
 
   getTrips(){
-    console.log("Gonna Fetch trips");
     this.webService.sendGetRequestWithToken(this.url,this.token).subscribe(res=>{
       if(res.status=="success")
         this.trips=res.data;
-      console.log(res);
     });
   }
 }

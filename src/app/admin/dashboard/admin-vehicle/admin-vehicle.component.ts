@@ -13,7 +13,6 @@ export class AdminVehicleComponent implements OnInit {
 
   ngOnInit() {
     this.token=localStorage.getItem("token");
-    console.log("Initialized");
     this.getVehicles();
   }
 
@@ -22,11 +21,9 @@ export class AdminVehicleComponent implements OnInit {
   vehicles:any[]=[];
 
   getVehicles(){
-    console.log("Gonna Fetch vehicles");
     this.webService.sendGetRequestWithToken(this.url,this.token).subscribe(res=>{
       if(res.status=="success")
         this.vehicles=res.data;
-      console.log(res);
     });
   }
 

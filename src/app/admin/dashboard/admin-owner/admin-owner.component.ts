@@ -13,7 +13,6 @@ export class AdminOwnerComponent implements OnInit {
 
   ngOnInit() {
     this.token=localStorage.getItem("token");
-    console.log("Initialized");
     this.getOwners();
   }
 
@@ -22,11 +21,9 @@ export class AdminOwnerComponent implements OnInit {
   owners:any[]=[];
 
   getOwners(){
-    console.log("Gonna Fetch Owners");
     this.webService.sendGetRequestWithToken(this.url,this.token).subscribe(res=>{
       if(res.status=="success")
         this.owners=res.data;
-      console.log(res);
     });
   }
 

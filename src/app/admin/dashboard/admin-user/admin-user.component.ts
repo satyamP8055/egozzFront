@@ -13,7 +13,6 @@ export class AdminUserComponent implements OnInit {
 
   ngOnInit() {
     this.token=localStorage.getItem("token");
-    console.log("Initialized");
     this.getUsers();
   }
 
@@ -22,11 +21,9 @@ export class AdminUserComponent implements OnInit {
   users:any[]=[];
 
   getUsers(){
-    console.log("Gonna Fetch users");
     this.webService.sendGetRequestWithToken(this.url,this.token).subscribe(res=>{
       if(res.status=="success")
         this.users=res.data;
-      console.log(res);
     });
   }
 }
