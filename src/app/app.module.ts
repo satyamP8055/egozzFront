@@ -72,7 +72,7 @@ import { AdminUserComponent } from './admin/dashboard/admin-user/admin-user.comp
     HttpClientModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyB65XfSoZ0Ad9hjFnzIbts0IcrgA2Sn7XU',
+      apiKey: '',
       libraries: ['places']
     })
   ],
