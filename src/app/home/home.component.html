@@ -30,8 +30,8 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li *ngIf="loggedIn"><a [class.lightA]="lightNav"><span class="glyphicon glyphicon-user"></span>
-                        {{firstName}}</a></li>
+                <li><a [class.lightA]="lightNav" routerLink="owner"><span class="fa fa-paper-plane"></span>
+                        My Car</a></li>
                 <li *ngIf="!loggedIn"><a [class.lightA]="lightNav" data-toggle="modal" data-target="#formModal"><span
                             class="fa fa-sign-in"></span> Login / <span class="fa fa-user-plus"></span> Register</a>
                 </li>
