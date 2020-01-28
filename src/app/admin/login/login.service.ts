@@ -9,7 +9,7 @@ import { EgozzService } from 'src/app/egozz.service';
 
 export class LoginService {
 
-  private loginUrl: string = this.service.host+"/egozz/api/admin/login";
+  private loginUrl: string = this.service.host+"/api/admin/login";
 
   constructor(private http: HttpClient, private service:EgozzService) { }
 

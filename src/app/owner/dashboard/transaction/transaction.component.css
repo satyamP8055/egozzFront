@@ -13,3 +13,16 @@ td>.btn {
 .redHeading {
     color: rgb(192, 29, 45);
 }
+
+.transactionBox {
+    /* opacity: 0.6 ! important; */
+    background-color: transparent;
+    border-radius: 0px;
+    box-shadow: none;
+    border: 0px solid white;
+    width: 100%;
+}
+
+.transactionIcon {
+    font-size: 40px;
+}

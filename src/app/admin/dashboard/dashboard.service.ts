@@ -11,7 +11,7 @@ import { EgozzService } from 'src/app/egozz.service';
 export class DashboardService {
 
   private logoutUrl:string=this.service.host+"/api/admin/logout";
-  private accessUrl:string=this.service.host+"/egozz/api/admin/get-access";
+  private accessUrl:string=this.service.host+"/api/access";
 
   constructor(private http: HttpClient, private service:EgozzService) { }
 

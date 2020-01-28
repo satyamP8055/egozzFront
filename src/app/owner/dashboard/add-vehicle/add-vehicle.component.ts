@@ -103,7 +103,6 @@ export class AddVehicleComponent implements OnInit {
 
   addressSelected(){
     this.addressToBeSelected=false;
-    this.alert(this.latitude+"|"+this.longitude+" at "+this.address);
   }
 
   classList: any;

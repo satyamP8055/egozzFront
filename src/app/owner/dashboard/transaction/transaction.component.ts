@@ -31,6 +31,10 @@ export class TransactionComponent implements OnInit {
     this.getTransactions();
   }
 
+  paypalLogo:string=this.service.host+"/files/PaymentGateways/paypal.png";
+
+  payULogo:string=this.service.host+"/files/PaymentGateways/payU.png";
+
   confirmPayU(key:string){
     var tken=localStorage.getItem("tken");
     var url=this.service.host+"/api/payu/verify?paymentToken="+key;

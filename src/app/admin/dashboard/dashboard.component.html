@@ -1,5 +1,5 @@
 <div class="sidenav" *ngIf="sideBar">
-    <a *ngFor="let ac of access" [class.active]="ac==currentAccess" (click)="selectDivision(ac)">
+    <a *ngFor="let ac of access" [class.active]="ac.accessName==currentAccess" (click)="selectDivision(ac)" routerLink="{{ac.accessUrl}}">
         {{ac.accessName}}
     </a>
     <!-- <a href="#about" class="active">About</a>
@@ -15,13 +15,11 @@
             </button>
             <div class="navbar-brand">
                 <div class="logoHolder">
-                    <img src="{{logoLocation}}" class='logoImage'>
+                    <a (click)="sideBarToggle()" [class.activeBox]="sideBar" class="logoImage brandLeft"><span class='fa fa-bars'></span></a>
+                    <img src="{{logoLocation}}" class='logoImage brandRight'>
                 </div>
             </div>
         </div>
-        <ul class="nav navbar-nav" style="text-align:center;">
-            <li [class.activeBox]="sideBar" style="min-width:50px;"><a (click)="sideBarToggle()"><span class='fa fa-bars'></span></a></li>
-        </ul>
         <div class="collapse navbar-collapse" id="adminNavbar">
             <ul class="nav navbar-nav navbar-right">
                 <li *ngIf="profile"><a><span class="glyphicon glyphicon-user"></span> {{firstName}}</a></li>
@@ -31,4 +29,5 @@
     </div>
 </nav>
 <div [class.contentBox]="sideBar">
+    <router-outlet></router-outlet>
 </div>

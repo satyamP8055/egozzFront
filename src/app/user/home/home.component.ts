@@ -172,7 +172,6 @@ export class HomeComponent implements OnInit {
     this.token = localStorage.getItem("userToken");
     this.initialiseClass();
     this.vehicle.vehicleClass = {};
-    this.alert("hello");
   }
 
   token: string;

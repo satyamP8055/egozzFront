@@ -59,24 +59,23 @@ export class LoginComponent implements OnInit {
 
 
   adminLoginOperation(): void{
-    // var formData:any = new FormData();
-    // formData.append("userName",this.adminLogin.get("userName").value);
-    // formData.append("password",this.adminLogin.get("password").value);
-    // this.loginService.doAdminLogin(formData).subscribe(
-    //   response=> this.validateLogin(response)
-    // );
-    this.failed('Invalid Credentials !');
+    var formData:any = new FormData();
+    formData.append("userName",this.adminLogin.get("userName").value);
+    formData.append("password",this.adminLogin.get("password").value);
+    this.loginService.doAdminLogin(formData).subscribe(
+      response=> this.validateLogin(response)
+    );
+    // this.failed('Invalid Credentials !');
   }
 
   validateLogin(response):void{
-    if(response["statusCode"]==200){
       if(response["status"]=="success"){
         localStorage.setItem("token",response["token"]);
         this.router.navigateByUrl("/admin/dashboard");
       }
       else
-        alert("Invalid Credentials ");
-    } 
+        this.failed(response["message"]);
+  
   }
 
   ngOnInit() {

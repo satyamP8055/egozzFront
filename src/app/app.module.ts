@@ -28,6 +28,11 @@ import { TransactionComponent } from './owner/dashboard/transaction/transaction.
 import {ProfileComponent as OwnerProfileComponent} from './owner/dashboard/profile/profile.component';
 import { NoElementComponent } from './no-element/no-element.component';
 import { DataChartComponent } from './owner/dashboard/data-chart/data-chart.component';
+import { AdminVehicleComponent } from './admin/dashboard/admin-vehicle/admin-vehicle.component';
+import { AdminTripsComponent } from './admin/dashboard/admin-trips/admin-trips.component';
+import { AdminTransactionComponent } from './admin/dashboard/admin-transaction/admin-transaction.component';
+import { AdminOwnerComponent } from './admin/dashboard/admin-owner/admin-owner.component';
+import { AdminUserComponent } from './admin/dashboard/admin-user/admin-user.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +58,12 @@ import { DataChartComponent } from './owner/dashboard/data-chart/data-chart.comp
     TransactionComponent,
     OwnerProfileComponent,
     NoElementComponent,
-    DataChartComponent
+    DataChartComponent,
+    AdminVehicleComponent,
+    AdminTripsComponent,
+    AdminTransactionComponent,
+    AdminOwnerComponent,
+    AdminUserComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +72,7 @@ import { DataChartComponent } from './owner/dashboard/data-chart/data-chart.comp
     HttpClientModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
-      apiKey: '',
+      apiKey: 'AIzaSyB65XfSoZ0Ad9hjFnzIbts0IcrgA2Sn7XU',
       libraries: ['places']
     })
   ],

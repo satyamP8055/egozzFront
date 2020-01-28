@@ -88,20 +88,21 @@
     <div class="modal fade" id="paymentBoxModal" role="dialog">
         <div class="modal-dialog">
 
-            <div class="modal-content alertBox">
+            <div class="modal-content transactionBox">
                 <div class="modal-header hidden">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <div class="dialogIconHolder">
-                        <span class="dialogIcon blueIcon fa fa-comments-o"></span>
-                    </div>
-                    <h3 class="titleHead dialogTitle blueIcon">Choose Your Payment Mode : </h3>
+                    <h3 class="titleHead dialogTitle blueIcon">Choose Your Payment Mode </h3>
 
                     <div class="row">
                         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-md-offset-2 col-lg-offset-2">
-                            <button class=" btn btnBlue fullGrid" style="margin-top:10px;" data-dismiss="modal" (click)="payByPayPal()">PAYPAL</button>
-                            <button class=" btn btnGreen fullGrid" style="margin-top:10px;" data-dismiss="modal" (click)="payByPayU()">PAYUMONEY (UPI / NETBANKING / Cards / Wallets)</button>
+                            <button class=" btn fullGrid payPalBtn" style="margin-top:10px;" data-dismiss="modal" (click)="payByPayPal()">
+                                <img src="{{paypalLogo}}">
+                            </button>
+                            <button class=" btn fullGrid payUBtn" style="margin-top:10px;" data-dismiss="modal" (click)="payByPayU()">
+                                <img src="{{payULogo}}">
+                            </button>
                         </div>
                     </div>
                 </div>

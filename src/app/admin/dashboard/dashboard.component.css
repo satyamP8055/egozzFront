@@ -1,6 +1,7 @@
 .logoHolder {
     text-align: center;
     padding: 5px;
+    cursor: pointer;
     width: 150px;
     padding-right: 10px;
     height: 50px;
@@ -8,6 +9,12 @@
 
 .navbar-brand {
     padding: 0px;
+}
+
+.brandLeft {
+    margin-right: 30px;
+    cursor: pointer;
+    margin-left: 10px;
 }
 
 .logoImage {
@@ -18,6 +25,11 @@
 
 .contentBox {
     margin-left: 200px;
+}
+
+.contentFormat {
+    padding: 10px;
+    padding-top: 80px;
 }
 
 .sidenav {
@@ -34,6 +46,7 @@
 
 .sidenav a {
     padding: 8px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding-left: 15px;
     height: 40px;
     text-decoration: none;

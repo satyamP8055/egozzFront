@@ -27,6 +27,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.token = localStorage.getItem("token");
     this.getAccess();
+    this.selectDivision(undefined);
   }
 
   sideBarToggle(): void {
@@ -45,7 +46,7 @@ export class DashboardComponent implements OnInit {
           this.sideBar = true;
       }
       else
-        alert(response["message"]);
+        console.log(response);
     });
   }
 
@@ -56,7 +57,13 @@ export class DashboardComponent implements OnInit {
   }
 
   selectDivision(ac) {
-    this.currentAccess = ac;
+    if(ac==undefined || ac=="undefined"){
+      this.currentAccess=localStorage.getItem("currentAccess");
+    }
+    else{
+      this.currentAccess = ac.accessName;
+      localStorage.setItem("currentAccess",ac.accessName);
+    }
   }
 
 }
